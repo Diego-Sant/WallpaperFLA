@@ -5,6 +5,7 @@ import Error from "../Helper/Error";
 import { PHOTOS_GET } from "../../api";
 import Loading from "../Helper/Loading";
 import styles from "./FeedPhotos.module.css";
+import Head from "../Helper/Head";
 
 const FeedPhotos = ({ page, setModalPhoto, setInfinite }) => {
   const { data, loading, error, request } = useFetch();
@@ -24,6 +25,7 @@ const FeedPhotos = ({ page, setModalPhoto, setInfinite }) => {
   if (data)
     return (
       <ul className={`${styles.feed} animeLeft`}>
+        <Head title="Menu Principal" />
         {data.map((photo) => (
           <FeedPhotosItem
             key={photo.id}

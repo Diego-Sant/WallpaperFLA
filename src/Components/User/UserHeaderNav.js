@@ -23,25 +23,19 @@ const UserHeaderNav = () => {
       {mobile && (
         <button
           aria-label="Menu"
-          className={`${styles.mobileButton} ${
-            mobileMenu && styles.mobileButtonActive
-          }`}
+          className={`${styles.mobileButton} ${mobileMenu &&
+            styles.mobileButtonActive}`}
           onClick={() => setMobileMenu(!mobileMenu)}
         ></button>
       )}
 
       <nav
-        className={`${mobile ? styles.navMobile : styles.nav} ${
-          mobileMenu && styles.navMobileActive
-        }`}
+        className={`${mobile ? styles.navMobile : styles.nav} ${mobileMenu &&
+          styles.navMobileActive}`}
       >
         <NavLink to="/conta" end>
           <FlamengoFotos />
           {mobile && "Minhas Fotos"}
-        </NavLink>
-        <NavLink to="/conta/estatisticas">
-          <FlamengoStats />
-          {mobile && "Estatísticas"}
         </NavLink>
         <NavLink to="/conta/postar">
           <FlamengoAdd />
