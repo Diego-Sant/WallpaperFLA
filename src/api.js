@@ -1,4 +1,4 @@
-export const API_URL = "https://wallpaperfla.test/json";
+export const API_URL = "http://wallpaperfla.test/json";
 
 export function TOKEN_POST(body) {
   return {
